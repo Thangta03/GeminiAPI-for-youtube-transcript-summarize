@@ -1,1 +1,63 @@
-# GeminiAPI-for-youtube-transcript-summerize
+1, cần 1 app scrapping web để thu thập thông tin tự động
+2, dùng chatgpt/bất cứ AI gì để tóm tắt thông tin, API 
+3, chuyển vid thành script 
+
+
+The structure would connect:
+
+Storage with list of sites
+
+Basic site scraper
+
+Cleaning process to simplify scraped data into its simplest format
+
+Locally run LLM model (AI) is prompted with this data with instructions to either extract data or locate relevant elements’ sectors
+
+Second site scraper1, crawling: crawlee: command: npx crawlee create my-crawler27.2.2024
+1, run youtube transcript, crawlee api for spiderum web /
+
+2, met vclvlcvclvll ngu da /
+
+3, chay dc youtube transcript api /
+
+4, bat dau du an
+- get transcript, summarize /
++ input: "nhap video url:" x<-
++ extract the video ID:
+https://www.youtube.com/watch?v=mlPS9MK5FZ4 -> mlPS9MK5FZ4 
++ gan cho bien X, nhap X vao
+
+- get thumpnail and caption for folder from youtube api
+- merge 2 subject and add a interfare if possible and try to make it automation
+- find if can use multiple languages if possible
+- somehow use chatgpt API to summarize if possible
+
+- chay api chat gpt offline to import data form research paper
+truoc do co the chay de summarize 
++ download the file from the link and some how input word even if in pdf 
+
+- 4/3/2024
+1, open .txt when finish / (copilot said it already does)
+2, delete the previous file if there is one with the same name /
+3, save the .txt file to current folder /
+4, cut the unnessery part (cut the part in cdm, the part in .txt need more research)
+5, use gemini to summarize (half, got the API)
+
+5/3/2024
+continue the work
+currently have Gemini API, Langchain API
+5/3/2024
+continue the work
+currently have Gemini API, Langchain API
+
+1, change so can add multiple videos ( not priority )
+2, khong in dc nhieu vid vi open multiple .txt
+
+4, auto design advance pptw.
+idea for next project: chrome extension that can scraping and summarize, after that at to a list of new headline in chrome
+
+get NewAPI to read new everyday.
+Newcatcher API promote to get API for 1 month
+https://docs.google.com/forms/d/e/1FAIpQLSejrsj4a1ZQkIasiKCtyaWbeaMb7iZ-TOPi5BHyUEGwnVSR9A/viewform7/3/2024 
+1, fix to only save the .txt
+2, now need to use gemini API to summarize
