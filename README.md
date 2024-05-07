@@ -61,3 +61,11 @@ Newcatcher API promote to get API for 1 month
 https://docs.google.com/forms/d/e/1FAIpQLSejrsj4a1ZQkIasiKCtyaWbeaMb7iZ-TOPi5BHyUEGwnVSR9A/viewform7/3/2024 
 1, fix to only save the .txt
 2, now need to use gemini API to summarize
+
+7/5/2024
+Update: 
+1, Can use YoutubeAPI to get transcript only of the video
+2, Can get name, language, translated script, thumbnail of the video
+3, Can use Gemini API to summarize short text
+4, Video transcipt is way too long (norm >20000 character/words) > study from langchain to split the text file to smaller trunk to summarize, but struggle to keep the coherence, may need fine-tuning
+5, Try to use Github Copilot Workspace
