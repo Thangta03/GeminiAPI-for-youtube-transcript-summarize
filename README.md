@@ -1,25 +1,20 @@
-1, cần 1 app scrapping web để thu thập thông tin tự động
-2, dùng chatgpt/bất cứ AI gì để tóm tắt thông tin, API 
-3, chuyển vid thành script 
-
+Aiming:
+1, Get YouTube transcript
+2, Use Gemini API to summarize
+3, Merge the 2
+4, Use scrapping/crawling technique to summarize new/study/research
 
 The structure would connect:
-
-Storage with list of sites
-
-Basic site scraper
-
-Cleaning process to simplify scraped data into its simplest format
+1, Storage with a list of sites
+2, Basic site scraper
+3, Cleaning process to simplify scraped data into its simplest format
 
 Locally run LLM model (AI) is prompted with this data with instructions to either extract data or locate relevant elements’ sectors
 
 Second site scraper1, crawling: crawlee: command: npx crawlee create my-crawler27.2.2024
 1, run youtube transcript, crawlee api for spiderum web /
-
 2, met vclvlcvclvll ngu da /
-
 3, chay dc youtube transcript api /
-
 4, bat dau du an
 - get transcript, summarize /
 + input: "nhap video url:" x<-
@@ -43,29 +38,28 @@ truoc do co the chay de summarize
 4, cut the unnessery part (cut the part in cdm, the part in .txt need more research)
 5, use gemini to summarize (half, got the API)
 
-5/3/2024
-continue the work
-currently have Gemini API, Langchain API
-5/3/2024
+- 5/3/2024
 continue the work
 currently have Gemini API, Langchain API
 
+- x/3/2024
 1, change so can add multiple videos ( not priority )
 2, khong in dc nhieu vid vi open multiple .txt
 
 4, auto design advance pptw.
-idea for next project: chrome extension that can scraping and summarize, after that at to a list of new headline in chrome
+idea for next project: chrome extension that can scraping and summarize, after that at to a list of new headlines in chrome
 
-get NewAPI to read new everyday.
-Newcatcher API promote to get API for 1 month
+- x/4/2024
+get NewAPI to read new every day.
+New atcher API promote to get API for 1 month
 https://docs.google.com/forms/d/e/1FAIpQLSejrsj4a1ZQkIasiKCtyaWbeaMb7iZ-TOPi5BHyUEGwnVSR9A/viewform7/3/2024 
 1, fix to only save the .txt
-2, now need to use gemini API to summarize
+2, now need to use Gemini API to summarize
 
 7/5/2024
 Update: 
 1, Can use YoutubeAPI to get transcript only of the video
 2, Can get name, language, translated script, thumbnail of the video
 3, Can use Gemini API to summarize short text
-4, Video transcipt is way too long (norm >20000 character/words) > study from langchain to split the text file to smaller trunk to summarize, but struggle to keep the coherence, may need fine-tuning
+4, Video transcript is way too long (norm >20000 characters/words) > study from Langchain to split the text file to smaller trunk to summarize, but struggle to keep the coherence, may need fine-tuning
 5, Try to use Github Copilot Workspace
