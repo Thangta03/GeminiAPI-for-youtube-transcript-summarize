@@ -1,0 +1,1 @@
+Fail to merge the 2 API => Try to exercute the Gemini API first

@@ -1,0 +1,3 @@
+start try to use Gemini API/Poe API
+1, Poe AI first as no need no use VPN
+2, after that try Gemini API

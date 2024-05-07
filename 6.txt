@@ -1,0 +1,8 @@
+5/3/2024
+continue the work
+currently have Gemini API, Langchain API
+
+1, change so can add multiple videos ( not priority )
+2, khong in dc nhieu vid vi open multiple .txt
+
+4, auto design advance pptw.

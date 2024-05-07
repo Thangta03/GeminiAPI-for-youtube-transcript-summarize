@@ -1,0 +1,5 @@
+idea for next project: chrome extension that can scraping and summarize, after that at to a list of new headline in chrome
+
+get NewAPI to read new everyday.
+Newcatcher API promote to get API for 1 month
+https://docs.google.com/forms/d/e/1FAIpQLSejrsj4a1ZQkIasiKCtyaWbeaMb7iZ-TOPi5BHyUEGwnVSR9A/viewform

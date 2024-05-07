@@ -1,0 +1,24 @@
+27.2.2024
+1, run youtube transcript, crawlee api for spiderum web /
+
+2, met vclvlcvclvll ngu da /
+
+3, chay dc youtube transcript api /
+
+4, bat dau du an
+- get transcript, summarize /
++ input: "nhap video url:" x<-
++ extract the video ID:
+https://www.youtube.com/watch?v=mlPS9MK5FZ4 -> mlPS9MK5FZ4 
++ gan cho bien X, nhap X vao
+
+- get thumpnail and caption for folder from youtube api
+- merge 2 subject and add a interfare if possible and try to make it automation
+- find if can use multiple languages if possible
+- somehow use chatgpt API to summarize if possible
+
+- chay api chat gpt offline to import data form research paper
+truoc do co the chay de summarize 
++ download the file from the link and some how input word even if in pdf 
+
+- 

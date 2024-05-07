@@ -1,0 +1,16 @@
+1, cần 1 app scrapping web để thu thập thông tin tự động
+2, dùng chatgpt/bất cứ AI gì để tóm tắt thông tin, API 
+3, chuyển vid thành script 
+
+
+The structure would connect:
+
+Storage with list of sites
+
+Basic site scraper
+
+Cleaning process to simplify scraped data into its simplest format
+
+Locally run LLM model (AI) is prompted with this data with instructions to either extract data or locate relevant elements’ sectors
+
+Second site scraper
