@@ -25,6 +25,25 @@ pip install -r requirements.txt
 ```
 This will install all the necessary packages listed in the `requirements.txt` file, ensuring that the project's dependencies are met.
 
+## Configuring API Keys
+To enhance security and flexibility, it's recommended to store your Gemini API key in environment variables. This approach allows you to keep your API keys secure while also making it easy to update them without changing your application's code.
+
+### Setting Up Environment Variables
+#### For Windows:
+1. Open the Start Search, type in "env", and choose "Edit the system environment variables".
+2. In the System Properties window, click on the "Environment Variables..." button.
+3. In the Environment Variables window, click on the "New..." button under the "User variables" section.
+4. Enter `GEMINI_API_KEY` as the Variable name and your Gemini API key as the Variable value.
+5. Click OK and apply the changes.
+
+#### For Unix-based Systems (Linux/Mac):
+1. Open your terminal.
+2. Edit your profile file (e.g., `~/.bash_profile`, `~/.zshrc`, `~/.profile`, etc.) using a text editor.
+3. Add the following line to the file: `export GEMINI_API_KEY="your_gemini_api_key"`.
+4. Save the file and reload your profile (e.g., run `source ~/.bash_profile`).
+
+After setting up the environment variable, you can access your Gemini API key in your application using the appropriate method for your programming language (e.g., `os.getenv('GEMINI_API_KEY')` in Python).
+
 ## Challenges and Solutions
 - **Maintaining Coherence**: One of the main challenges was ensuring coherence when dividing the transcript into smaller segments for summarization. This was addressed by carefully designing the segment division process and fine-tuning the summarization parameters.
 - **Technical Implementation**: The project leverages GitHub Copilot Workspace for assistance in overcoming technical challenges, streamlining the development process.

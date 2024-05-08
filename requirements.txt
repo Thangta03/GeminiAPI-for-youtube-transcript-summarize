@@ -5,3 +5,4 @@ pathlib
 textwrap
 IPython
 langchain-google-vertexai
+python-dotenv

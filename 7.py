@@ -12,7 +12,8 @@ def to_markdown(text):
     text = text.replace('•', '  *')
     return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
 
-genai.configure(api_key='AIzaSyDY05BBs50jLdrXfoGvgi2GCkNkV6lbtIw')
+# Fetch API key from environment variable
+genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
 model = genai.GenerativeModel('gemini-pro')
 
 def divide_transcript_into_segments(transcript, segment_length=1000):

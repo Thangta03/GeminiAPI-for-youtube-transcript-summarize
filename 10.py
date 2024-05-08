@@ -1,4 +1,5 @@
 # Import libraries
+import os
 import pathlib
 import textwrap
 
@@ -12,9 +13,8 @@ def to_markdown(text):
   text = text.replace('•', '  *')
   return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
 
-## Or use `os.getenv('GOOGLE_API_KEY')` to fetch an environment variable.
-
-genai.configure(api_key='AIzaSyDY05BBs50jLdrXfoGvgi2GCkNkV6lbtIw')
+# Fetch API key from environment variable
+genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
 
 # Config
 model = genai.GenerativeModel('gemini-pro')

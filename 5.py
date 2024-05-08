@@ -1,4 +1,5 @@
 # pip install -q -U google-generativeai
+import os
 import pathlib
 import textwrap
 import IPython
@@ -17,7 +18,7 @@ def to_markdown(text):
 # API key
 # Or use `os.getenv('GOOGLE_API_KEY')` to fetch an environment variable.
 # GOOGLE_API_KEY=userdata.get('GOOGLE_API_KEY')
-genai.configure(api_key='AIzaSyDY05BBs50jLdrXfoGvgi2GCkNkV6lbtIw')
+genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
 
 # for m in genai.list_models():
 #  if 'generateContent' in m.supported_generation_methods:
