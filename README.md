@@ -18,6 +18,13 @@ This project focuses on enhancing educational resources by efficiently extractin
 ## Usage
 To utilize this system, follow the documentation provided in `README.md`, which guides users through the implementation and usage of the project's features.
 
+### Installing Required Packages
+To install the required Python packages for this project, run the following command in your terminal:
+```
+pip install -r requirements.txt
+```
+This will install all the necessary packages listed in the `requirements.txt` file, ensuring that the project's dependencies are met.
+
 ## Challenges and Solutions
 - **Maintaining Coherence**: One of the main challenges was ensuring coherence when dividing the transcript into smaller segments for summarization. This was addressed by carefully designing the segment division process and fine-tuning the summarization parameters.
 - **Technical Implementation**: The project leverages GitHub Copilot Workspace for assistance in overcoming technical challenges, streamlining the development process.

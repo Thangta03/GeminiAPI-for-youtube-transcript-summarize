@@ -1,0 +1,7 @@
+google-generativeai
+youtube_transcript_api
+pytube
+pathlib
+textwrap
+IPython
+langchain-google-vertexai
