@@ -1,0 +1,1 @@
+ALL files are for self-education purpose, 1-5.py are applying the API, after that are side project to applying GeminiAPI, langchain, etc. Use with cautions, if anyone ever use of course 
