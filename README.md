@@ -1,65 +1,29 @@
-Aiming:
-  1, Get YouTube transcript
-  2, Use Gemini API to summarize
-  3, Merge the 2
-  4, Use scrapping/crawling technique to summarize new/study/research
+# GeminiAPI for YouTube Transcript Summarization
 
-The structure would connect:
-  1, Storage with a list of sites
-  2, Basic site scraper
-  3, Cleaning process to simplify scraped data into its simplest format
+## Project Overview
+This project focuses on enhancing educational resources by efficiently extracting YouTube video transcripts and titles, dividing the transcript into smaller, manageable segments, summarizing each segment using Gemini API, and merging these summaries into a comprehensive educational resource. The process is designed to maintain coherence across summaries, ensuring the final output is both informative and concise.
 
-Locally run LLM model (AI) is prompted with this data with instructions to either extract data or locate relevant elements’ sectors
+## Features
+- **Transcript Extraction**: Utilizes YouTube API to fetch video transcripts and titles.
+- **Segment Division**: Divides the transcript into smaller segments for easier processing.
+- **Summarization**: Employs Gemini API to summarize each segment, focusing on maintaining coherence across the summaries.
+- **Merging Summaries**: Combines the summarized segments to form a unified educational resource.
 
-Second site scraper1, crawling: crawlee: command: npx crawlee create my-crawler27.2.2024
-  1, run youtube transcript, crawlee api for spiderum web /
-  2, met vclvlcvclvll ngu da /
-  3, chay dc youtube transcript api /
-  4, bat dau du an
-- get transcript, summarize /
-+ input: "nhap video url:" x<-
-+ extract the video ID:
-https://www.youtube.com/watch?v=mlPS9MK5FZ4 -> mlPS9MK5FZ4 
-+ gan cho bien X, nhap X vao
+## Implementation
+1. **Extracting Transcripts and Titles**: The system begins by extracting the video transcript and title using the YouTube API.
+2. **Dividing the Transcript**: The transcript is then divided into smaller segments. This division is crucial for managing the summarization process, as it allows for each segment to be summarized individually, ensuring a more coherent and comprehensive summary.
+3. **Summarizing Segments**: Each segment is summarized using Gemini API. This step is key to condensing the information while retaining the essential messages.
+4. **Merging Summaries**: Finally, the individual summaries are merged to create a complete, summarized version of the original transcript. This merged summary serves as a valuable educational resource.
 
-- get thumpnail and caption for folder from youtube api
-- merge 2 subject and add a interfare if possible and try to make it automation
-- find if can use multiple languages if possible
-- somehow use chatgpt API to summarize if possible
+## Usage
+To utilize this system, follow the documentation provided in `README.md`, which guides users through the implementation and usage of the project's features.
 
-- chay api chat gpt offline to import data form research paper
-truoc do co the chay de summarize 
-+ download the file from the link and some how input word even if in pdf 
+## Challenges and Solutions
+- **Maintaining Coherence**: One of the main challenges was ensuring coherence when dividing the transcript into smaller segments for summarization. This was addressed by carefully designing the segment division process and fine-tuning the summarization parameters.
+- **Technical Implementation**: The project leverages GitHub Copilot Workspace for assistance in overcoming technical challenges, streamlining the development process.
 
-- 4/3/2024
-  1, open .txt when finish / (copilot said it already does)
-  2, delete the previous file if there is one with the same name /
-  3, save the .txt file to current folder /
-  4, cut the unnessery part (cut the part in cdm, the part in .txt need more research)
-  5, use gemini to summarize (half, got the API)
+## Future Directions
+The project's methodology can be expanded to other applications, such as speech-to-text conversion, offering a foundation for further innovation in educational technology.
 
-- 5/3/2024
-continue the work
-currently have Gemini API, Langchain API
-
-- x/3/2024
-  1, change so can add multiple videos ( not priority )
-  2, khong in dc nhieu vid vi open multiple .txt
-
-  4, auto design advance pptw.
-idea for next project: chrome extension that can scraping and summarize, after that at to a list of new headlines in chrome
-
-- x/4/2024
-get NewAPI to read new every day.
-New atcher API promote to get API for 1 month
-https://docs.google.com/forms/d/e/1FAIpQLSejrsj4a1ZQkIasiKCtyaWbeaMb7iZ-TOPi5BHyUEGwnVSR9A/viewform7/3/2024 
-  1, fix to only save the .txt
-  2, now need to use Gemini API to summarize
-
-- 7/5/2024
-Update: 
-  1, Can use YoutubeAPI to get transcript only of the video
-  2, Can get name, language, translated script, thumbnail of the video
-  3, Can use Gemini API to summarize short text
-  4, Video transcript is way too long (norm >20000 characters/words) > study from Langchain to split the text file to smaller trunk to summarize, but struggle to keep the coherence, may need fine-tuning
-  5, Try to use Github Copilot Workspace
+## Acknowledgments
+This project was made possible through the use of YouTube API for transcript extraction and Gemini API for summarization. Special thanks to GitHub Copilot Workspace for providing valuable assistance throughout the development process.

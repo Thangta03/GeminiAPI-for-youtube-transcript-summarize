@@ -2,56 +2,60 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from pytube import YouTube
 import os
 import json
+import google.generativeai as genai
+
+# Configure the Gemini API
+genai.configure(api_key='YOUR_GEMINI_API_KEY')
+model = genai.GenerativeModel('gemini-pro')
+
+def divide_transcript_into_segments(transcript, segment_length=1000):
+    """
+    Divides the transcript into smaller segments of approximately segment_length characters.
+    """
+    segments = []
+    current_segment = ""
+    for paragraph in transcript.split('\n'):
+        if len(current_segment) + len(paragraph) > segment_length:
+            segments.append(current_segment)
+            current_segment = paragraph + '\n'
+        else:
+            current_segment += paragraph + '\n'
+    segments.append(current_segment)  # Add the last segment
+    return segments
+
+def summarize_segment(segment):
+    """
+    Summarizes a segment of the transcript using Gemini API.
+    """
+    response = model.generate_content(segment)
+    return response.text
+
+def merge_summaries(summaries):
+    """
+    Merges the summarized segments into a single summary.
+    """
+    return '\n'.join(summaries)
 
 try:
     video_url = input("Enter the YouTube video URL: ") 
     video_id = video_url.split("v=")[1]
     yt = YouTube(video_url)
     video_title = yt.title
-    # Replace characters in title that are not allowed in file names
     valid_filename = "".join(i for i in video_title if i not in ":*?<>|/")
-    # Translate the transcript to other languages
     transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-    transcript = transcript_list.find_transcript(['vi', 'en'])
-    YouTubeTranscriptApi.get_transcripts([video_id], languages=['vi', 'en'])
+    transcript = transcript_list.find_transcript(['vi', 'en']).fetch()
+    full_transcript = ' '.join([item['text'] for item in transcript])
     
-    # Metadata for the video transcript
-    print(
-            video_title + '\n   ',  
-            transcript.language + ' - ',
-            transcript.language_code + ' - ',
-            transcript.video_id  ,
-)
+    segments = divide_transcript_into_segments(full_transcript)
+    summaries = [summarize_segment(segment) for segment in segments]
+    final_summary = merge_summaries(summaries)
+    
+    os.makedirs('summaries', exist_ok=True)
+    summary_file_path = os.path.join('summaries', f'{valid_filename}_summary.txt')
+    with open(summary_file_path, 'w') as file:
+        file.write(final_summary)
+    
+    print(f"Summary has been written to {summary_file_path}")
+
 except Exception as e:
     print("An error occurred:", str(e))
-
-# Create a new directory named "transcript" in the current directory if it does not already exist
-os.makedirs('transcript', exist_ok=True)
-
-# Define the file path
-file_path = os.path.join('transcript', f'{valid_filename}.txt')
-
-# Open a text file in write mode
-with open(file_path, 'w') as file:
-    # Iterate over all available transcripts
-    for transcript in transcript_list:
-        # Translate the transcript to English
-        translated_transcript = transcript.translate('en').fetch()
-
-        # Remove the timestamp from the translated transcript
-        for entry in translated_transcript:
-            del entry['start']
-            del entry['duration']
-
-        # Write the translated transcript to the file
-        file.write('Translated Transcript:\n')
-        for entry in translated_transcript:
-            file.write(entry['text'] + '\n')
-        file.write('\n\n')
-
-print("Transcript has been written to file.")
-
-# Open the file with its associated application
-import subprocess
-subprocess.call(["xdg-open", file_path])
-# os.startfile(file_path)
